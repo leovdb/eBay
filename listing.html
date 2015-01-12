@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.section-container {
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	width: 750px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.header-section {
+	/* [disabled]background-color: #F8F8F8;
+*/
+}
+#header-tabs {
+	width: 100%;
+	position: relative;
+	clear: both;
+}
+#contact-details {
+	text-align: right;
+	padding: 5px;
+	float: right;
+	height: 40px;
+	font-size: 10px;
+}
+#contact-details-header {
+	margin: 0px;
+	font-weight: 600;
+}
+.header-tab {
+	padding: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+	list-style-type: none;
+	background-color: #F4F4F4;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.header-tab.active {
+	background-color: #EEE;
+}
+.tab-content-table-heading {
+	color: #333;
+	/* [disabled]padding-right: 3px;
+*/
+	font-size: 12px;
+	vertical-align: top;
+	/* [disabled]width: 25%;
+*/
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-weight: 600;
+	cursor: help;
+}
+.tab-content-logo-table-container {
+	clear: both;
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+.info-table {
+	background-color: #fff;
+	border: thin solid #666;
+	border-radius: 5px;
+	position: relative;
+}
+.tab-content-logo-table {
+	position: absolute;
+	left: 10px;
+	top: -20px;
+	z-index: 999;
+}
+.header-tab-list {
+	padding: 0px;
+}
+.header-tab:hover {
+	background-color: #CCC;
+}
+#listing-body {
+	background-color: #EEE;
+	padding: 10px;
+	clear: both;
+	width: 730px;
+	/* [disabled]border-bottom-left-radius: 10px;
+*/
+	/* [disabled]border-bottom-right-radius: 10px;
+*/
+	border-radius: 5px;
+}
+.tab-content {
+	width: 100%;
+	/* [disabled]display: none; */
+}
+.tab-content-toggle {
+	width: 100%;
+	display: none;
+}
+.tab-visible {
+	display: inline-block;
+}
+#email-us-enquire {
+	font-size: 12px;
+	margin-top: 3px;
+	margin-bottom: 0px;
+}
+.tab-left {
+	float: left;
+}
+.tab-right {
+	float: right;
+}
+.tab-link {
+	color: #666;
+	text-decoration: none;
+	cursor: pointer;
+}
+#header-logo {
+	background-color: #FFFFFF;
+	padding: 5px;
+	float: left;
+}
+.contact-details-info {
+	color: #666;
+	margin-top: 3px;
+	margin-bottom: 0px;
+}
+.tab-content-section {
+	clear: both;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#img-container {
+	margin-top: 15px;
+}
+#tab-content-price {
+	font-size: 36px;
+	font-weight: 600;
+	/* [disabled]float: left;
+*/
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right-width: thin;
+	border-right-style: solid;
+	border-right-color: #333;
+	color: #06F;
+}
+.price-comparison-header {
+	font-size: 12px;
+	color: #666;
+}
+.price-comparison-price {
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	color: #06F;
+}
+#tab-content-mainimg {
+	padding: 3px;
+}
+#tab-content-headline-header {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+#tab-content-headline {
+	/* [disabled]float: left;
+*/
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+#tab-content-price-comparison {
+	text-align: right;
+}
+.tab-content-section-header {
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 3px;
+}
+.tab-content-standard-p {
+	color: #333;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 12px;
+}
+.tab-content-table-info {
+	color: #666;
+	padding-right: 3px;
+	font-size: 12px;
+	vertical-align: top;
+	/* [disabled]width: 25%;
+*/
+	/* [disabled]padding-bottom: 5px;
+*/
+	padding-left: 5px;
+}
+#quote-quote {
+	font-size: 96px;
+	font-weight: 600;
+	color: #06F;
+	float: left;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.right-col {
+	padding-left: 10px;
+}
+.table-info-full {
+	width: 85%;
+}
+.table-row-section-start {
+	padding-top: 25px;
+}
+.table-image {
+	/* [disabled]width: 20%;
+*/
+	padding-bottom: 5px;
+}
+.table-image-data {
+	font-size: 12px;
+	color: #666;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.table-row-line-top {
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #999;
+}
+.table-row-section-end {
+	padding-bottom: 10px;
+}
+.table-image-img {
+	height: 35px;
+	width: 35px;
+	cursor: help;
+}
+#quote-text {
+	font-size: 14px;
+	color: #666;
+	float: left;
+	padding-bottom: 5px;
+	line-height: 20px;
+}
+#quote-source {
+	font-size: 12px;
+	color: #999;
+}
+#quote-container {
+	position: relative;
+	padding-left: 65px;
+	padding-right: 10px;
+	margin-top: 25px;
+}
+#email-us {
+	font-size: 24px;
+	font-weight: 600;
+	color: #FFF;
+	background-color: #06F;
+	text-align: center;
+	padding: 5px;
+	width: 50%;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+#price-comparison-price-dealer {
+	color: #333;
+	text-decoration: line-through;
+}
+</style>
+</head>
+
+<body>
+
+<!-- JQuery loader --> 
+<script async type="text/javascript"> 
+
+// Anonymous "self-invoking" function
+(function() {
+    // Load the script
+    var script = document.createElement("SCRIPT");
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js';
+    script.type = 'text/javascript';
+    document.getElementsByTagName("head")[0].appendChild(script);
+
+    // Poll for jQuery to come into existance
+    var checkReady = function(callback) {
+        if (window.jQuery) {
+            callback(jQuery);
+        }
+        else {
+            window.setTimeout(function() { checkReady(callback); }, 100);
+        }
+    };
+
+    // Start polling...
+    checkReady(function($) {
+        
+		$(document).ready(function ($) {
+            var options = {
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+			
+			jQuery('.tab-link').on('click', function(e)  {
+    		
+			// More Code Here
+			
+			var targetLink = '#tab-' + jQuery(this).text();
+			
+			jQuery(targetLink).show();
+			jQuery(targetLink).siblings().hide();
+			
+			jQuery(this).parent().addClass("active");
+			jQuery(this).parent().siblings().removeClass("active");
+			
+			e.preventDefault();
+			
+			});
+			
+        });	
+		
+    });
+})();
+
+function addJavascript(jsname,pos) {
+var th = document.getElementsByTagName(pos)[0];
+var s = document.createElement('script');
+s.setAttribute('type','text/javascript');
+s.setAttribute('src',jsname);
+th.appendChild(s);
+} 
+//<!--addJavascript('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','head');-->
+</script>
+
+<!-- use jssor.slider.mini.js (40KB) instead for release --> 
+<!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) --> 
+<script type="text/javascript" src="jssor.js"></script> 
+<script type="text/javascript" src="jssor.slider.js"></script> 
+<script>
+        
+    </script>
+<div class="section-container header-section">
+	<div id="header-logo"> <img src="Driven-Logo.gif" width="206" height="50" alt="Driven Logo" /> </div>
+	<div id="contact-details">
+		<p id="contact-details-header">Contact us</p>
+		<p class="contact-details-info">e: hello@driven.io</p>
+		<p class="contact-details-info">t: 07XXX XXXXXX</p>
+	</div>
+	<div id="header-tabs">
+		<ul class="header-tab-list">
+			<li class="header-tab active tab-left"><span href="#t1" class="tab-link">Overview</span></li>
+			<li class="header-tab tab-left"><span href="#t2" class="tab-link">Interior</span></li>
+			<li class="header-tab tab-left"><span href="#t3" class="tab-link">Exterior</span></li>
+			<li class="header-tab tab-left"><span href="#t4" class="tab-link">History</span></li>
+			<li class="header-tab tab-left"><span href="#t5" class="tab-link">Performance</span></li>
+			<li class="header-tab tab-left"><span href="#t6" class="tab-link">Safety</span></li>
+			<li class="header-tab tab-left"><span href="#t7" class="tab-link">Mechanical</span></li>
+			<li class="header-tab tab-right"><span href="#t8" class="tab-link">FAQ</span></li>
+		</ul>
+	</div>
+</div>
+<div class="section-container">
+	<div id="listing-body">
+		<div class="tab-content">
+			<div class="tab-content-section">
+				<table width="730" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td id="tab-content-price">£40,000</td>
+						<td id="tab-content-headline"><h1 id="tab-content-headline-header">2005 ASTON MARTIN DB9 V12 2dr Touchtronic Auto</h1>
+							<h2 class="tab-content-section-header">Lorem ipsum dolor sit amet</h2></td>
+						<td id="tab-content-price-comparison"><div class="price-comparison-header">Dealer price</div>
+							<div class="price-comparison-price" id="price-comparison-price-dealer">£45,000</div>
+							<div class="price-comparison-header">You save</div>
+							<div class="price-comparison-price">£5,000</div></td>
+					</tr>
+				</table>
+			</div>
+			<div class="tab-content-toggle-wrapper">
+				<div class="tab-content-toggle tab-visible" id="tab-Overview">
+					<div class="tab-content-section">
+						<h2 class="tab-content-section-header">Summary</h2>
+						<p class="tab-content-standard-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+					<div class="tab-content-section" id="img-container"> 
+						
+						<!-- Jssor Slider Begin --> 
+						<!-- You can move inline styles to css file or css block. -->
+						<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 730px; height: 375px; "> 
+							
+							<!-- Slides Container -->
+							<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 730px; height: 375px;
+						overflow: hidden;">
+								<div><img u="image" src="001.jpg" /></div>
+								<div><img u="image" src="002.jpg" /></div>
+								<div><img u="image" src="003.jpg" /></div>
+								<div><img u="image" src="004.jpg" /></div>
+								<div><img u="image" src="005.jpg" /></div>
+								<div><img u="image" src="006.jpg" /></div>
+								<div><img u="image" src="007.jpg" /></div>
+								<div><img u="image" src="008.jpg" /></div>
+							</div>
+							
+							<!-- Arrow Navigator Skin Begin -->
+							<style>
+						/* jssor slider arrow navigator skin 03 css */
+						/*
+						.jssora03l              (normal)
+						.jssora03r              (normal)
+						.jssora03l:hover        (normal mouseover)
+						.jssora03r:hover        (normal mouseover)
+						.jssora03ldn            (mousedown)
+						.jssora03rdn            (mousedown)
+						*/
+						.jssora03l, .jssora03r, .jssora03ldn, .jssora03rdn
+						{
+							position: absolute;
+							cursor: pointer;
+							display: block;
+							background: url(a03.png) no-repeat;
+							overflow:hidden;
+						}
+						.jssora03l { background-position: -3px -33px; }
+						.jssora03r { background-position: -63px -33px; }
+						.jssora03l:hover { background-position: -123px -33px; }
+						.jssora03r:hover { background-position: -183px -33px; }
+						.jssora03ldn { background-position: -243px -33px; }
+						.jssora03rdn { background-position: -303px -33px; }
+					</style>
+							<!-- Arrow Left --> 
+							<span u="arrowleft" class="jssora03l" style="width: 55px; height: 55px; top: 123px; left: 8px;"> </span> 
+							<!-- Arrow Right --> 
+							<span u="arrowright" class="jssora03r" style="width: 55px; height: 55px; top: 123px; right: 8px"> </span> 
+						</div>
+						<div class="tab-content-section">
+							<table width="730" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="50%" valign="top"><div id="quote-container">
+											<div id="quote-quote">&#8220;</div>
+											<div id="quote-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+											<div id="quote-source">Miles, current owner</div>
+											<div id="email-us">Email us<p id="email-us-enquire">to enquire</p></div>
+										</div></td>
+									<td width="50%" valign="top" class="right-col"><div class="tab-content-logo-table-container"> <img src="car-logo.gif" width="40" height="40" class="tab-content-logo-table"/>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table">
+												<tr>
+													<td align="center" width="20%" class="table-image table-row-section-start"><img src="door-icon.gif" title="Number of doors" class="table-image-img"/></td>
+													<td align="center" width="20%" class="table-image table-row-section-start"><img src="seat-icon.gif" title="Number of seats" class="table-image-img"/></td>
+													<td align="center" width="20%" class="table-image table-row-section-start"><img src="petrol-icon.gif" title="Fuel type" class="table-image-img"/></td>
+													<td align="center" width="20%" class="table-image table-row-section-start"><img src="transmission-icon.gif" title="Transmission type" class="table-image-img"/></td>
+													<td align="center" width="20%" class="table-image table-row-section-start"><img src="engine-icon.gif" title="Engine size" class="table-image-img"/></td>
+												</tr>
+												<tr>
+													<td align="center" width="20%" class="table-image-data" title="Number of doors">5</td>
+													<td align="center" width="20%" class="table-image-data" title="Number of doors">5</td>
+													<td align="center" width="20%" class="table-image-data" title="Number of doors">Diesel</td>
+													<td align="center" width="20%" class="table-image-data" title="Number of doors">Automatic</td>
+													<td align="center" width="20%" class="table-image-data" title="Number of doors">2.0L</td>
+												</tr>
+											</table>
+										</div>
+										<div class="tab-content-logo-table-container"> <img src="checklist-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table">
+												<tr>
+													<td width="30%" class="tab-content-table-heading table-row-section-start">Service history</td>
+													<td width="70%" class="tab-content-table-info table-row-section-start">Complete</td>
+												</tr>
+												<tr>
+													<td width="30%" class="tab-content-table-heading">HPI</td>
+													<td width="70%" class="tab-content-table-info table-info-full">Clean</td>
+												</tr>
+												<tr>
+													<td width="30%" class="tab-content-table-heading table-row-section-end">AA Inspection</td>
+													<td width="70%" class="tab-content-table-info table-info-full table-row-section-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+												</tr>
+											</table>
+										</div>
+										<div class="tab-content-logo-table-container"> <img src="money-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table">
+												<tr>
+													<td width=33% align="center" class="tab-content-table-heading table-row-section-start">Tax bracket</td>
+													<td width=34% align="center" class="tab-content-table-heading table-row-section-start">Insurance group</td>
+													<td width=33% align="center" class="tab-content-table-heading table-row-section-start">Miles per gallon</td>
+												</tr>
+												<tr>
+													<td width=33% align="center" class="tab-content-table-info table-row-section-end">xxx</td>
+													<td width=34% align="center" class="tab-content-table-info table-row-section-end">xxx</td>
+													<td width=33% align="center" class="tab-content-table-info table-row-section-end">xxx</td>
+												</tr>
+											</table>
+										</div></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="tab-content-toggle" id="tab-Interior">
+					<div class="tab-content-section">
+						<h2 class="tab-content-section-header">Summary</h2>
+						<p class="tab-content-standard-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+				</div>
+				<div class="tab-content-toggle" id="tab-Exterior">
+					<div class="tab-content-section">
+						<h2 class="tab-content-section-header">Summary</h2>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+</body>
+</html>
