@@ -296,6 +296,17 @@
 	background: url(a03.png) no-repeat;
 	overflow:hidden;
 }
+.FAQ-q {
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+.FAQ-a {
+	margin-top: 0px;
+	font-size: small;
+}
+.blue-text {
+	color: #06F;
+}
 .jssora03l { background-position: -3px -33px; }
 .jssora03r { background-position: -63px -33px; }
 .jssora03l:hover { background-position: -123px -33px; }
@@ -307,6 +318,10 @@
 </head>
 
 <body>
+
+<script type="text/javascript" src="jssor.js"></script> 
+<script type="text/javascript" src="jssor.slider.js"></script> 
+<script type="text/javascript" src="jssor.slider.mini.js"></script> 
 
 <!-- JQuery loader --> 
 <script async type="text/javascript"> 
@@ -353,19 +368,43 @@ function sizeDivs(divClass)
     checkReady(function($) {
         
 		$(document).ready(function ($) {
-            var options = {
+            
+			//Define an array of slideshow transition code
+        /*var _SlideshowTransitions = [
+				{ code1 },
+				{ code2 },
+				{ code3 }
+				];*/
+			
+			var optionsAuto = {
                 $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
                 $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
                     $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
                     $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
                     $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                }
+                    $Steps: 1,                                       //[Optional] Steps to go for each navigation request, default value is 1
+				},
+					$AutoPlay: true,
+					$AutoPlayInterval: 3000
+					
+                
+            };
+			
+			var optionsManual = {
+                $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                       //[Optional] Steps to go for each navigation request, default value is 1
+				},
+				$FillMode: 1
+					
             };
 
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-			var jssor_slider2 = new $JssorSlider$("slider2_container", options);
-			var jssor_slider3 = new $JssorSlider$("slider3_container", options);
+            var jssor_slider1 = new $JssorSlider$("slider1_container", optionsAuto);
+			var jssor_slider2 = new $JssorSlider$("slider2_container", optionsManual);
+			var jssor_slider3 = new $JssorSlider$("slider3_container", optionsManual);
 			
 			
 			jQuery('.tab-link').on('click', function(e)  {
@@ -382,6 +421,12 @@ function sizeDivs(divClass)
 			
 			sizeDivs('.table-interior1');
 			sizeDivs('.table-interior2');
+			
+			sizeDivs('.table-performance');
+			
+			sizeDivs('.table-safety');
+			
+			sizeDivs('.table-exterior');
 			
 			e.preventDefault();
 			
@@ -404,8 +449,6 @@ th.appendChild(s);
 
 <!-- use jssor.slider.mini.js (40KB) instead for release --> 
 <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) --> 
-<script type="text/javascript" src="jssor.js"></script> 
-<script type="text/javascript" src="jssor.slider.js"></script> 
 <script>
         
     </script>
@@ -486,7 +529,7 @@ th.appendChild(s);
 										<div id="quote-source">Miles, current owner</div>
 										<div id="email-us">Email us<p id="email-us-enquire">to enquire</p></div>
 									</div></td>
-								<td width="50%" valign="top" class="right-col"><div class="tab-content-logo-table-container"> <img src="car-logo.gif" width="40" height="40" class="tab-content-logo-table"/>
+								<td width="50%" valign="top" class="right-col"><div class="tab-content-logo-table-container"> <img src="car-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
 										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table">
 											<tr>
 												<td align="center" width="20%" class="table-image table-row-section-start"><img src="door-icon.gif" title="Number of doors" class="table-image-img"/></td>
@@ -676,26 +719,43 @@ th.appendChild(s);
 					<div class="tab-content-section">
 						<table width="730" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="100%">
-									<div class="tab-content-logo-table-container"> <img src="boot-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
-										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table">
+								<td width="49.5%">
+									<div class="tab-content-logo-table-container"> <img src="car-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-exterior">
 											<tr>
 												
-												<td width="12.5%" class="tab-content-table-heading table-row-section-start">Headlight type</td>
-												<td width="12.5%" class="tab-content-table-info table-row-section-start">Standard</td>
-												<td width="12.5%" class="tab-content-table-heading table-row-section-start">Specialist bodywork</td>
-												<td width="12.5%" class="tab-content-table-info table-row-section-start">None</td>
-												<td width="12.5%" class="tab-content-table-heading table-row-section-start">Wheel colour</td>
-												<td width="12.5%" class="tab-content-table-info table-row-section-start">None</td>
-												<td width="12.5%" class="tab-content-table-heading table-row-section-start">Wheel type</td>
-												<td width="12.5%" class="tab-content-table-info table-row-section-start">None</td>
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Headlight type</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start">Standard</td>
+											</tr>
+											<tr>
+												<td width="50%" class="tab-content-table-heading">Specialist bodywork</td>
+												<td width="50%" class="tab-content-table-info">None</td>
+											</tr>
+										</table>
+									</div>
+								</td>
+								<td width="1%">&nbsp;</td>
+								<td width="49.5%">
+										<div class="tab-content-logo-table-container"> <img src="tyre-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-exterior">
+											<tr>		
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Wheel type</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start">???</td>
+											</tr>
+											<tr>
+												<td width="50%" class="tab-content-table-heading">Wheel diameter</td>
+												<td width="50%" class="tab-content-table-info">???</td>
+											</tr>
+											<tr>
+												<td width="50%" class="tab-content-table-heading">Wheel colour</td>
+												<td width="50%" class="tab-content-table-info">???</td>
 											</tr>
 										</table>
 									</div>
 								</td>
 							</tr>
 							<tr>
-								<td width="100%">
+								<td colspan="3" width="100%">
 									<div class="tab-content-logo-table-container"> <img src="scratches-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
 										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table">
 											<tr>
@@ -757,7 +817,15 @@ th.appendChild(s);
 													<td width="67%" class="tab-content-table-info">xxx xxx xxx (xxx miles)</td>
 												</tr>
 												<tr>
+													<td width="33%" class="tab-content-table-heading">&nbsp;</td>
+													<td width="67%" class="tab-content-table-info">&nbsp;</td>
+												</tr>
+												<tr>
 													<td width="33%" class="tab-content-table-heading">MOT expiry</td>
+													<td width="67%" class="tab-content-table-info">xxx xxx xxx</td>
+												</tr>
+												<tr>
+													<td width="33%" class="tab-content-table-heading">Recent refurbishment/ replacements</td>
 													<td width="67%" class="tab-content-table-info">xxx xxx xxx</td>
 												</tr>
 												</table>
@@ -792,6 +860,249 @@ th.appendChild(s);
 						</table>			
 					</div>
 					
+				</div>
+				<div class="tab-content-toggle" id="tab-Performance">
+					<div class="tab-content-section">
+						<table width="730" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="49.5%">
+									<div class="tab-content-logo-table-container"> <img src="speed-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-performance">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">BHP</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start">160</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">0-60mph</td>
+												<td width="50%" class="tab-content-table-info">9.1 seconds</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Top speed</td>
+												<td width="50%" class="tab-content-table-info">140mph</td>
+												
+											</tr>
+										</table>
+									</div>
+								</td>
+								<td width="1%">&nbsp;</td>
+								<td width="49.5%">
+									<div class="tab-content-logo-table-container"> <img src="money-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-performance">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Fuel Capacity</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start">70 litres</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Miles per gallon</td>
+												<td width="50%" class="tab-content-table-info">34</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">CO2 Emmissions</td>
+												<td width="50%" class="tab-content-table-info">199g/km</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Annual running costs(?)</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</table>			
+					</div>
+					
+				</div>
+				<div class="tab-content-toggle" id="tab-Safety">
+					<div class="tab-content-section">
+						<table width="730" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="33%">
+									<div class="tab-content-logo-table-container"> <img src="padlock-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-safety">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Central Locking</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start"></td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Keyless start</td>
+												<td width="50%" class="tab-content-table-info">No</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Alarm system</td>
+												<td width="50%" class="tab-content-table-info">xxx</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Immobiliser</td>
+												<td width="50%" class="tab-content-table-info">No</td>
+												
+											</tr>
+										</table>
+									</div>
+								</td>
+								<td width="0.5%">&nbsp;</td>
+								<td width="33%">
+									<div class="tab-content-logo-table-container"> <img src="wheel-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-safety">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Power steering</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start"></td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">ABS</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Traction control</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Dynamic stability control</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+										</table>
+									</div>
+								</td>
+								<td width="0.5%">&nbsp;</td>
+								<td width="33%">
+									<div class="tab-content-logo-table-container"> <img src="seatbelt-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-safety">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Airbag (driver)</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start">Yes</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Airbag (passenger)</td>
+												<td width="50%" class="tab-content-table-info">Yes</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Airbag (side)</td>
+												<td width="50%" class="tab-content-table-info">???</td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Rear seatbelts</td>
+												<td width="50%" class="tab-content-table-info">???</td>
+												
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</table>			
+					</div>
+					
+				</div>
+				<div class="tab-content-toggle" id="tab-Mechanical">
+					<div class="tab-content-section">
+						<table width="730" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="49.5%">
+									<div class="tab-content-logo-table-container"> <img src="spanner-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-safety">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Modifications to suspension/ exhaust</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start">None</td>
+												
+											</tr>
+											<tr class="table-row-section-end">
+												
+												<td width="50%" class="tab-content-table-heading">Specialist additions</td>
+												<td width="50%" class="tab-content-table-info">None</td>
+												
+											</tr>											
+										</table>
+									</div>
+								</td>
+								<td width="1%">&nbsp;</td>
+								<td width="49.5%">
+									<div class="tab-content-logo-table-container"> <img src="tyre-icon.gif" width="40" height="40" class="tab-content-logo-table"/>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="info-table table-safety">
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading table-row-section-start">Tyre type</td>
+												<td width="50%" class="tab-content-table-info table-row-section-start"></td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Tyre make</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+											<tr>
+												
+												<td width="50%" class="tab-content-table-heading">Tyre compound</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+											<tr class="table-row-section-end">
+												
+												<td width="50%" class="tab-content-table-heading">Tyre tread remaining</td>
+												<td width="50%" class="tab-content-table-info"></td>
+												
+											</tr>
+										</table>
+									</div>
+								</td>								
+							</tr>
+						</table>			
+					</div>
+					
+				</div>
+				<div class="tab-content-toggle" id="tab-FAQ">
+					<div class="tab-content-section">
+						<h3 class="blue-text">About us</h3>
+						<p class="FAQ-q">What is Driven?</p>
+						<p class="FAQ-a">Driven is a company that makes buying and selling a car as fuss free as possible. For the owner, we handle everything from cleaning the car, to listing it and handling enquiries and test drives. For potential buyers, we provide peace of mind through our AA inspections and we try to provide you with all the information you need about the car to make an informed buying decision.</p>
+						<p class="FAQ-q">Are you car dealers?</p>
+						<p class="FAQ-a">No. We do not buy cars, we only help owners sell their cars.</p>
+						<p class="FAQ-q">Can you help me sell my car?</p>
+						<p class="FAQ-a">Of course, provided you (and the car) are based in London, and the car is worth more than £5,000. Visit our website (www.driven-cars.com) for more details.</p>
+						<h3 class="blue-text">Buying the car</h3>
+						<p class="FAQ-q">Can I see the AA inspection report?</p>
+						<p class="FAQ-a">Absolutely. Once you have enquired about the car to us, we will send you an electronic copy of the inspection report.</p>
+						<p class="FAQ-q">Can I see the car on a different day to the test drive day?</p>
+						<p class="FAQ-a">Unfortunately, no. At Driven we try to make buying a selling a car as fuss free for everyone. This means that we minimise the disruption to the owner of the car, and the best way to do this is to have all the test drives happen on the same day.</p>
+						<p class="FAQ-q">If I want to buy the car, how do I agree a price?</p>
+						<p class="FAQ-a">After the test drive day, we will be in touch with everyone who has seen the car. If you are happy with the asking price...</p>
+						<p class="FAQ-q">How do I pay for the car?</p>
+						<p class="FAQ-a">If we agree a price for you to buy the car, you will transfer the money direct to the owner of the car. Once they have received the money, we will arrange for you to collect the car.</p>
+					</div>
 				</div>
 			</div>
 		</div>	
